@@ -38,13 +38,10 @@ public class EmployeeDao {
 	}
 	
 	public boolean update(Employee e) {
-		
-		
 		return false;
 	}
 	
 	public boolean delete(Employee e) {
-		
 		return false;
 	}
 	
@@ -52,6 +49,7 @@ public class EmployeeDao {
 		
 		Session ses = HibernateUtil.getSession();
 		
+		// This is HQL hibernate query language
 		List<Employee> emps = ses.createQuery("from Employee", Employee.class).list();
 		
 		return emps;
