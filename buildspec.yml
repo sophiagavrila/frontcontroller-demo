@@ -10,7 +10,6 @@ phases:
  post_build:
   commands:
   - echo "Entered the post-build phase"
-  - cp target/FrontControllerDemo.war /var/lib/tomcat/webapps/
 artifacts:
  files:
   - target/**
