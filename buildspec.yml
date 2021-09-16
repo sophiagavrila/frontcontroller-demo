@@ -6,11 +6,11 @@ phases:
  build:
   commands:
   - echo "Entered build phase"
-  - mvn clean prepare-package war:exploded
+  mvn -f pom.xml compile war: exploded
  post_build:
   commands:
   - echo "Entered the post-build phase"
-  - mv target/FrontControllerDemo.war ./
+  - mv target/FrontControllerDemo ./
 artifacts:
  files:
   - FrontControllerDemo/**/*
