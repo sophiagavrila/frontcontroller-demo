@@ -2,7 +2,7 @@ version: 0.2
 phases:
  pre-build:
   commands:
-  - echo: "Entered pre-build phase"
+  - echo "Entered pre-build phase"
  build:
   commands:
   - echo "Entered build phase"
