@@ -6,12 +6,12 @@ phases:
  build:
   commands:
   - echo "Entered build phase"
-  - mvn clean package
+  - mvn clean prepare-package war:explode
  post_build:
   commands:
   - echo "Entered the post-build phase"
   - mv target/FrontControllerDemo.war ./
 artifacts:
  files:
-  - FrontControllerDemo.war
+  - FrontControllerDemo/**/*
   
