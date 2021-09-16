@@ -13,5 +13,5 @@ phases:
   - mv target/FrontControllerDemo.war ./
 artifacts:
  files:
-  - target/**
+  - FrontControllerDemo.war
   
