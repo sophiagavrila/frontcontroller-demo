@@ -2,16 +2,16 @@ version: 0.2
 phases:
  pre_build:
   commands:
-  - echo "Entered pre-build phase"
+  - echo Entered pre-build phase, nothing to do
  build:
   commands:
-  - echo "Entered build phase"
-  - mvn clean package
+  - echo Build started on `date`
+  - mvn install
  post_build:
   commands:
-  - echo "Entered the post-build phase"
-  - cp target/FrontControllerDemo.war $CATALINE_HOME/webapps
+  - echo Entered the post-build phase
 artifacts:
  files:
-  - target/**/*
-  
+  - '**/FrontControllerDemo.war
+  - 'appspec.yaml'
+  discard-paths: yes
