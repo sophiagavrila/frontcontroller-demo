@@ -10,6 +10,8 @@ phases:
  post_build:
   commands:
    - echo "end of build"
+   - mv /codebuild/output/src562424656/src/target/FrontControllerDemo.war /usr/share/tomcat/webapps/
+   - sudo service tomcat restart
 artifacts:
  files:
   - '**/FrontControllerDemo.war'
