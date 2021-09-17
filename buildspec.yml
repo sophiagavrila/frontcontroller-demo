@@ -5,13 +5,11 @@ phases:
   - echo Entered pre-build phase, nothing to do
  build:
   commands:
-  - echo Build started on `date`
-  - mvn install
+  - echo "Entering build phase now"
+  - mvn clean package
  post_build:
   commands:
-  - echo Entered the post-build phase
+   - echo "end of build"
 artifacts:
  files:
-  - '**/FrontControllerDemo.war
-  - 'appspec.yaml'
-  discard-paths: yes
+  - '**/FrontControllerDemo.war'
